@@ -179,6 +179,7 @@ h1, h2, h3 { margin-top: 0; line-height: 1.1; letter-spacing: -.045em; }
 .article-meta dd { margin: 0; font-size: .82rem; font-weight: 700; }
 .article-grid { display: grid; grid-template-columns: 220px minmax(0, 760px); justify-content: center; gap: 50px; padding-top: 70px; padding-bottom: 110px; }
 .article-aside { align-self: start; position: sticky; top: 100px; }
+.article-aside, .article-content { min-width: 0; }
 .aside-box { padding: 18px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); font-size: .76rem; }
 .aside-box strong { color: var(--accent); font-family: "IBM Plex Mono", monospace; }
 .aside-box p { margin-bottom: 0; color: var(--muted); }
@@ -245,7 +246,7 @@ h1, h2, h3 { margin-top: 0; line-height: 1.1; letter-spacing: -.045em; }
   .terminal-card { max-width: 620px; transform: none; }
   .card-grid { grid-template-columns: 1fr 1fr; }
   .split-grid { grid-template-columns: 1fr; }
-  .article-grid { grid-template-columns: 1fr; }
+  .article-grid { grid-template-columns: minmax(0, 1fr); }
   .article-aside { position: static; }
 }
 
