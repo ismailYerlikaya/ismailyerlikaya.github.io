@@ -1,0 +1,17 @@
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <a class="brand footer-brand" href="{{ '/' | relative_url }}">
+      <span class="brand-mark" aria-hidden="true">IY</span>
+      <span class="brand-copy"><strong>İsmail Yerlikaya</strong><small>Build. Break. Learn. Document.</small></span>
+    </a>
+    <div class="footer-links" aria-label="Sosyal bağlantılar">
+      <a href="https://github.com/{{ site.author.github }}" rel="me noopener" target="_blank">GitHub ↗</a>
+      <a href="https://www.linkedin.com/in/{{ site.author.linkedin }}/" rel="me noopener" target="_blank">LinkedIn ↗</a>
+      <a href="mailto:{{ site.author.email }}">E-posta</a>
+    </div>
+  </div>
+  <div class="container footer-meta">
+    <span>© {{ 'now' | date: '%Y' }} İsmail Yerlikaya</span>
+    <span>GitHub Pages üzerinde açık kaynaklarla hazırlanmıştır.</span>
+  </div>
+</footer>

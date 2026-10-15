@@ -1,0 +1,27 @@
+<a class="skip-link" href="#main-content">İçeriğe geç</a>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="{{ '/' | relative_url }}" aria-label="Ana sayfa">
+      <span class="brand-mark" aria-hidden="true">IY</span>
+      <span class="brand-copy">
+        <strong>İsmail Yerlikaya</strong>
+        <small>security.log</small>
+      </span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+      <span></span><span></span><span></span>
+      <span class="sr-only">Menüyü aç</span>
+    </button>
+    <nav id="primary-nav" class="primary-nav" aria-label="Ana menü">
+      <a href="{{ '/about/' | relative_url }}" {% if page.url == '/about/' %}aria-current="page"{% endif %}>Hakkımda</a>
+      <a href="{{ '/labs/' | relative_url }}" {% if page.url contains '/labs/' %}aria-current="page"{% endif %}>Labs</a>
+      <a href="{{ '/projects/' | relative_url }}" {% if page.url == '/projects/' %}aria-current="page"{% endif %}>Projects</a>
+      <a href="{{ '/blog/' | relative_url }}" {% if page.url contains '/blog/' %}aria-current="page"{% endif %}>Blog</a>
+      <a href="{{ '/contact/' | relative_url }}" {% if page.url == '/contact/' %}aria-current="page"{% endif %}>İletişim</a>
+      <button class="theme-toggle" type="button" aria-label="Renk temasını değiştir" title="Renk temasını değiştir">
+        <span class="theme-icon theme-icon-sun" aria-hidden="true">☀</span>
+        <span class="theme-icon theme-icon-moon" aria-hidden="true">☾</span>
+      </button>
+    </nav>
+  </div>
+</header>

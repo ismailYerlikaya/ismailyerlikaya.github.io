@@ -1,0 +1,16 @@
+---
+layout: default
+title: "Cybersecurity Labs"
+description: "İzinli eğitim ortamlarında tamamlanan siber güvenlik laboratuvarları ve teknik çözüm notları."
+permalink: /labs/
+---
+<section class="page-hero labs-hero"><div class="container narrow"><p class="eyebrow">LAB ARCHIVE</p><h1>Cybersecurity Labs</h1><p class="page-lead">Her çalışma; amaç, ortam, analiz, uygulama adımları ve öğrenilen derslerle birlikte belgelenir.</p><div class="ethics-note"><strong>Etik kullanım:</strong> Bu içerikler yalnızca sahip olunan veya açıkça test izni verilen sistemlerde uygulanmalıdır.</div></div></section>
+<section class="page-body"><div class="container">
+  <div class="archive-toolbar"><span>{{ site.labs | size }} çalışma</span><span>Başlangıç koleksiyonu · Taslak</span></div>
+  <div class="archive-grid">
+    {% assign sorted_labs = site.labs | sort: 'order' %}
+    {% for lab in sorted_labs %}
+    <a class="archive-card" href="{{ lab.url | relative_url }}"><div class="archive-index">{{ lab.order | prepend: '0' | slice: -2, 2 }}</div><div class="archive-content"><div class="article-labels"><span class="tag">{{ lab.category }}</span><span class="status status-{{ lab.status }}">{{ lab.status_label }}</span></div><h2>{{ lab.short_title | default: lab.title }}</h2><p>{{ lab.description }}</p><div class="card-meta"><span>{{ lab.difficulty }} · {{ lab.environment }}</span><span>Write-up →</span></div></div></a>
+    {% endfor %}
+  </div>
+</div></section>

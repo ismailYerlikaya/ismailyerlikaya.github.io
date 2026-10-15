@@ -1,0 +1,8 @@
+---
+layout: default
+title: "Blog"
+description: "Siber güvenlik, yazılım geliştirme ve öğrenme süreci üzerine teknik notlar."
+permalink: /blog/
+---
+<section class="page-hero"><div class="container narrow"><p class="eyebrow">TECHNICAL JOURNAL</p><h1>Blog & Teknik Notlar</h1><p class="page-lead">Uzun write-up’ların dışında kalan kısa keşifler, geliştirme notları ve öğrendiklerim.</p></div></section>
+<section class="page-body"><div class="container narrow"><div class="notes-list blog-list">{% for post in site.posts %}<a href="{{ post.url | relative_url }}" class="note-row"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%d.%m.%Y' }}</time><div><h2>{{ post.title }}</h2><p>{{ post.description }}</p></div><span>↗</span></a>{% endfor %}</div></div></section>

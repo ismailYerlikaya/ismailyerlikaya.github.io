@@ -1,0 +1,55 @@
+title: "İsmail Yerlikaya"
+tagline: "Cybersecurity Labs & Technical Notes"
+description: "İsmail Yerlikaya'nın siber güvenlik lab çözümleri, teknik write-up'ları, projeleri ve öğrenme notları."
+url: "https://ismailyerlikaya.github.io"
+baseurl: ""
+lang: "tr-TR"
+timezone: "Europe/Istanbul"
+
+author:
+  name: "İsmail Yerlikaya"
+  email: "ismailyerli14@icloud.com"
+  github: "ismailYerlikaya"
+  linkedin: "ismail-yerlikaya-57004526b"
+
+logo: "/assets/images/favicon.svg"
+
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+permalink: /blog/:year/:month/:day/:title/
+
+collections:
+  labs:
+    output: true
+    permalink: /labs/:slug/
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "labs"
+    values:
+      layout: "lab"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-sitemap
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor

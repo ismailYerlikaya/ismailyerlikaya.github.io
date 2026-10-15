@@ -1,0 +1,80 @@
+---
+layout: default
+title: "İsmail Yerlikaya — Cybersecurity Labs & Technical Notes"
+description: "Siber güvenlik laboratuvar çözümleri, teknik write-up'lar, projeler ve öğrenme notları."
+body_class: home
+---
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <div class="availability"><span></span> Öğreniyor, test ediyor, belgeliyorum.</div>
+      <p class="eyebrow">CYBERSECURITY · DEVELOPMENT · NOTES</p>
+      <h1>Siber güvenliği yalnızca öğrenmiyorum. <em>Belgeliyorum.</em></h1>
+      <p class="hero-lead">Merhaba, ben İsmail. İzinli laboratuvar ortamlarında çalışıyor; öğrendiklerimi sade, tekrar edilebilir teknik write-up’lara dönüştürüyorum.</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="{{ '/labs/' | relative_url }}">Lab notlarını incele <span>→</span></a>
+        <a class="button button-secondary" href="{{ '/about/' | relative_url }}">Hakkımda</a>
+      </div>
+      <ul class="hero-facts" aria-label="Odak alanları">
+        <li><strong>01</strong><span>Web<br>Security</span></li>
+        <li><strong>02</strong><span>Secure<br>Development</span></li>
+        <li><strong>03</strong><span>Continuous<br>Learning</span></li>
+      </ul>
+    </div>
+    <div class="terminal-card" aria-label="Terminal görünümünde profil özeti">
+      <div class="terminal-top"><span></span><span></span><span></span><small>ismail@security:~</small></div>
+      <div class="terminal-body">
+        <p><b>$</b> whoami</p><p class="terminal-output">İsmail Yerlikaya</p>
+        <p><b>$</b> cat focus.txt</p><p class="terminal-output accent">web-security<br>application-security<br>technical-writing</p>
+        <p><b>$</b> status --current</p><p class="terminal-output"><span class="prompt-ok">●</span> building in public</p>
+        <p><b>$</b> <span class="cursor">_</span></p>
+      </div>
+      <div class="terminal-foot"><span>TR · UTC+3</span><span>secure by curiosity</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section labs-preview">
+  <div class="container">
+    <div class="section-heading"><div><p class="eyebrow">FIELD NOTES / 01</p><h2>Cybersecurity Labs</h2></div><a class="text-link" href="{{ '/labs/' | relative_url }}">Tüm lab’ları gör <span>→</span></a></div>
+    <div class="card-grid">
+      {% assign sorted_labs = site.labs | sort: 'order' %}
+      {% for lab in sorted_labs limit: 4 %}
+      <a class="lab-card" href="{{ lab.url | relative_url }}">
+        <div class="card-top"><span class="card-number">{{ lab.order | prepend: '0' | slice: -2, 2 }}</span><span class="tag">{{ lab.category }}</span></div>
+        <h3>{{ lab.short_title | default: lab.title }}</h3><p>{{ lab.description }}</p>
+        <div class="card-meta"><span>{{ lab.difficulty }}</span><span class="card-arrow">↗</span></div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section split-section">
+  <div class="container split-grid">
+    <div><p class="eyebrow">CURRENT FOCUS / 02</p><h2>Öğrenmeyi görünür bir sürece dönüştürüyorum.</h2></div>
+    <div class="focus-list">
+      <div class="focus-item"><span>01</span><div><h3>Analiz</h3><p>Problemi, saldırı yüzeyini ve beklenen davranışı önce anlamlandırıyorum.</p></div></div>
+      <div class="focus-item"><span>02</span><div><h3>Uygulama</h3><p>Adımları izole ve izinli ortamlarda tekrar ederek teknik ayrıntıları kaydediyorum.</p></div></div>
+      <div class="focus-item"><span>03</span><div><h3>Dokümantasyon</h3><p>Sonucu değil, düşünme sürecini ve alınan dersleri de açıkça yazıyorum.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section notes-preview">
+  <div class="container">
+    <div class="section-heading"><div><p class="eyebrow">RECENT LOGS / 03</p><h2>Blog & Teknik Notlar</h2></div><a class="text-link" href="{{ '/blog/' | relative_url }}">Arşive git <span>→</span></a></div>
+    <div class="notes-list">
+      {% for post in site.posts limit: 3 %}
+      <a href="{{ post.url | relative_url }}" class="note-row"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%d.%m.%Y' }}</time><div><h3>{{ post.title }}</h3><p>{{ post.description }}</p></div><span>↗</span></a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section final-cta">
+  <div class="container cta-box">
+    <p class="eyebrow">LET’S CONNECT</p><h2>Bir proje, fikir veya teknik sohbet?</h2><p>GitHub ve LinkedIn üzerinden bağlantı kurabilir, çalışmalarımı takip edebilirsin.</p>
+    <div class="hero-actions"><a class="button button-primary" href="{{ '/contact/' | relative_url }}">İletişime geç <span>→</span></a><a class="button button-secondary" href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener">GitHub profili ↗</a></div>
+  </div>
+</section>
